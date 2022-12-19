@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Header Component Header should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="border-gray-200 bg-white px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4 rounded sticky top-0 z-50 p-4 bg-white rounded-lg shadow dark:bg-gray-900 bottom-0 w-full"
+      >
+        <div
+          class="mx-auto flex flex-wrap items-center justify-between"
+        >
+          <a
+            class="flex items-center"
+          >
+            <img
+              alt="Chitter Logo"
+              class="mr-3 h-6 sm:h-9"
+              src="https://flowbite.com/docs/images/logo.svg"
+            />
+            <span
+              class="self-center whitespace-nowrap text-xl font-semibold  text-gray-600 dark:text-gray-300"
+            >
+              Chitter
+            </span>
+          </a>
+          <div
+            class="flex md:order-2"
+          >
+            <a
+              class=""
+              href="/login"
+            >
+              <button
+                class="text-white bg-blue-700 border border-transparent hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:disabled:hover:bg-blue-600 focus:!ring-2 group flex h-min items-center justify-center p-0.5 text-center font-medium focus:z-10 rounded-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                type="button"
+              >
+                <span
+                  class="flex items-center rounded-md text-sm px-4 py-2"
+                >
+                  Get started
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="border-gray-200 bg-white px-2 py-2.5 dark:border-gray-700 dark:bg-gray-800 sm:px-4 rounded sticky top-0 z-50 p-4 bg-white rounded-lg shadow dark:bg-gray-900 bottom-0 w-full"
+    >
+      <div
+        class="mx-auto flex flex-wrap items-center justify-between"
+      >
+        <a
+          class="flex items-center"
+        >
+          <img
+            alt="Chitter Logo"
+            class="mr-3 h-6 sm:h-9"
+            src="https://flowbite.com/docs/images/logo.svg"
+          />
+          <span
+            class="self-center whitespace-nowrap text-xl font-semibold  text-gray-600 dark:text-gray-300"
+          >
+            Chitter
+          </span>
+        </a>
+        <div
+          class="flex md:order-2"
+        >
+          <a
+            class=""
+            href="/login"
+          >
+            <button
+              class="text-white bg-blue-700 border border-transparent hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:disabled:hover:bg-blue-600 focus:!ring-2 group flex h-min items-center justify-center p-0.5 text-center font-medium focus:z-10 rounded-lg text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              type="button"
+            >
+              <span
+                class="flex items-center rounded-md text-sm px-4 py-2"
+              >
+                Get started
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

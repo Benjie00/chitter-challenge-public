@@ -1,0 +1,30 @@
+import moment from "moment";
+
+const PeepCard = ({ data }) => {
+  return (
+    <>
+      {data
+        .slice()
+        .reverse()
+        .map((post) => (
+          <div key={post.id}>
+            <div className="centerCustom">
+              <div className="p-4  bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 my-1">
+                <h5 className="mb-0 text-sml font-semibold tracking-tight dark:text-gray-100 text-gray-500">
+                  <p>{post.userName}</p>
+                </h5>
+                <p className="font-light text-gray-700 dark:text-gray-100 text-xs">
+                  {moment(post.createdAt).fromNow()}
+                </p>
+                <p className="text-sm  text-gray-700 dark:text-gray-300">
+                  {post.field}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+    </>
+  );
+};
+
+export default PeepCard;
