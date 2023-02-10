@@ -15,6 +15,7 @@ function App() {
   const [user, setUser] = useState({});
   const [errorStatus, setErrorStatus] = useState();
 
+  // https://chitter-xdej.onrender.com
   const getData = async () => {
     try {
       const response = await axios.get(`https://chitter-xdej.onrender.com`);
@@ -31,7 +32,7 @@ function App() {
   const addField = async (field) => {
     try {
       const response = await axios.post(
-        "https://chitter-xdej.onrender.com",
+        `https://chitter-xdej.onrender.com`,
         field
       );
       if (response.status === 201) {
