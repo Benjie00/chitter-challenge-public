@@ -23,7 +23,10 @@ const CreateAccount = () => {
     e.preventDefault();
     const { userName, email, password } = user;
     if (userName && email && password && password) {
-      const res = await axios.post(`http://localhost:8080/createAccount`, user);
+      const res = await axios.post(
+        `https://chitter-xdej.onrender.com/createAccount`,
+        user
+      );
       alert(res.data.message);
       setUser({ email: "", password: "", name: "" });
       return;

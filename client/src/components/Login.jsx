@@ -21,7 +21,10 @@ const Login = ({ setUser: setLoginUser }) => {
 
   const login = async (e) => {
     e.preventDefault();
-    const res = await axios.post(`http://localhost:8080/login`, user);
+    const res = await axios.post(
+      `https://chitter-xdej.onrender.com/login`,
+      user
+    );
     alert(res.data.message);
     console.dir(res.data.user);
     setLoginUser(res.data.user);
