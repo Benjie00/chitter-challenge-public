@@ -17,7 +17,7 @@ function App() {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`http://localhost:10000/`);
+      const response = await axios.get(`https://chitter-xdej.onrender.com`);
       setData(response.data);
     } catch (error) {
       setErrorStatus(error.message);
@@ -30,7 +30,10 @@ function App() {
 
   const addField = async (field) => {
     try {
-      const response = await axios.post("http://localhost:10000/", field);
+      const response = await axios.post(
+        "https://chitter-xdej.onrender.com",
+        field
+      );
       if (response.status === 201) {
         getData();
       }
