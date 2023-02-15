@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import PeepCard from "./components/PeepCard";
 import Post from "./components/Post";
 import CreateAccount from "./components/CreateAccount";
+import EllipsisButton from "./components/EllipsisButton";
 
 function App() {
   const [data, setData] = useState([]);
@@ -69,7 +70,7 @@ function App() {
               user && user._id ? (
                 <>
                   <Post user={user} addField={addField} />
-                  <PeepCard data={data} />
+                  <PeepCard data={data} EllipsisButton={EllipsisButton} />
                 </>
               ) : (
                 <PeepCard data={data} />
