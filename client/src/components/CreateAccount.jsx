@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 import { Label, Checkbox, TextInput, Button } from "flowbite-react";
@@ -10,6 +11,7 @@ const CreateAccount = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,6 +31,7 @@ const CreateAccount = () => {
       );
       alert(res.data.message);
       setUser({ email: "", password: "", name: "" });
+      navigate.push("/login"); // redirect to the login page
       return;
     }
     alert(`Invalid input`);

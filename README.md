@@ -20,6 +20,8 @@
 
 ## About
 **Date of completion: 11/11/2022**
+
+**Deployed Website: https://chitter-df.netlify.app/**
  
 This challenge tests the ability to use React JS and Node JS to develop a full-stack application called Chitter (a social media webpage). 
 
@@ -29,6 +31,7 @@ This challenge tests the ability to use React JS and Node JS to develop a full-s
 3) Back-end design (using express js framework)
 4) Connected front and back-end, so the data in the real database is used. 
 5) Write simple tests. 
+6) Deployed
 
 
 ## Getting Started
