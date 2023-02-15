@@ -54,6 +54,9 @@ function App() {
     }
   };
 
+  // console.log(user);
+  // console.log(data);
+
   return (
     <React.Fragment>
       <Helmet>
@@ -70,10 +73,18 @@ function App() {
               user && user._id ? (
                 <>
                   <Post user={user} addField={addField} />
-                  <PeepCard data={data} EllipsisButton={EllipsisButton} />
+                  <PeepCard
+                    data={data}
+                    EllipsisButton={EllipsisButton}
+                    user={user}
+                  />
                 </>
               ) : (
-                <PeepCard data={data} />
+                <PeepCard
+                  data={data}
+                  EllipsisButton={EllipsisButton}
+                  user={user}
+                />
               )
             }
           />
