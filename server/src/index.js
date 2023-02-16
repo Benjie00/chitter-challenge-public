@@ -14,11 +14,11 @@ dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 let app = express();
 
 const main = async () => {
-  console.log(`Connecting to database at: ${process.env.DBURI}`);
+  console.log(`Connecting to database`);
 
   try {
     await mongoose.connect(process.env.DBURI);
-    console.log(`Connected to the database at: ${process.env.DBURI}`);
+    console.log(`Connected to the database`);
   } catch (e) {
     console.log(`Database failed to connect: ${e.message}`);
   }
