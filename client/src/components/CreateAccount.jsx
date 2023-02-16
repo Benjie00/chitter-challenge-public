@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import axios from "axios";
 
@@ -29,12 +30,12 @@ const CreateAccount = () => {
         `https://chitter-xdej.onrender.com/createAccount`,
         user
       );
-      alert(res.data.message);
+      toast(res.data.message);
       setUser({ email: "", password: "", name: "" });
       navigate.push("/login"); // redirect to the login page
       return;
     }
-    alert(`Invalid input`);
+    toast(`Invalid input`);
   };
   return (
     <>

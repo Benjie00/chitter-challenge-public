@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = ({ setUser: setLoginUser }) => {
   const [user, setUser] = useState({
@@ -25,7 +26,7 @@ const Login = ({ setUser: setLoginUser }) => {
       `https://chitter-xdej.onrender.com/login`,
       user
     );
-    alert(res.data.message);
+    toast(res.data.message);
     setLoginUser(res.data.user);
     setUser({ email: "", password: "" });
     setLoggedIn(res.data.user ? true : false);
