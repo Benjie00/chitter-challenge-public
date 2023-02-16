@@ -61,7 +61,7 @@ function App() {
     setLoading(true);
     try {
       const response = await axios.delete(
-        `http://localhost:8080/deletePost/${postId}`
+        `https://chitter-xdej.onrender.com/deletePost/${postId}`
       );
       setLoading(false);
       if (response.status === 200) {
