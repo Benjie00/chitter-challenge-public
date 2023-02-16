@@ -16,7 +16,6 @@ const Post = ({ user, addField }) => {
       field,
       userName,
     };
-    console.dir(post);
     addField(post);
   };
 

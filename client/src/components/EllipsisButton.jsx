@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
-const EllipsisButton = () => {
+const EllipsisButton = ({ onDelete }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -22,6 +22,11 @@ const EllipsisButton = () => {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleDelete = () => {
+    onDelete();
+    setIsOpen(false); // close the dropdown menu after the delete button is clicked
   };
 
   return (
@@ -49,6 +54,7 @@ const EllipsisButton = () => {
             </li>
             <li>
               <button
+                onClick={handleDelete}
                 className="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 type="button"
               >

@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "./components/Spinner";
 
 import Header from "./components/Header";
@@ -54,14 +54,33 @@ function App() {
     }
   };
 
+  const onDelete = async (post) => {
+    setLoading(true);
+    try {
+      const response = await axios.delete(
+        `https://chitter-xdej.onrender.com/posts/${post._id}`
+      );
+      setLoading(false);
+      if (response.status === 200) {
+        getData();
+      }
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      setErrorStatus(error.message);
+    }
+  };
+
   // console.log(user);
   // console.log(data);
 
   return (
     <React.Fragment>
-      <Helmet>
-        <title>Chitter</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>Chitter</title>
+        </Helmet>
+      </HelmetProvider>
       <div>
         <Header user={user} setUser={setUser} />
         {loading && <Spinner />}
@@ -75,14 +94,18 @@ function App() {
                   <Post user={user} addField={addField} />
                   <PeepCard
                     data={data}
-                    EllipsisButton={EllipsisButton}
+                    EllipsisButton={(props) => (
+                      <EllipsisButton {...props} onDelete={onDelete} />
+                    )}
                     user={user}
                   />
                 </>
               ) : (
                 <PeepCard
                   data={data}
-                  EllipsisButton={EllipsisButton}
+                  EllipsisButton={(props) => (
+                    <EllipsisButton {...props} onDelete={onDelete} />
+                  )}
                   user={user}
                 />
               )

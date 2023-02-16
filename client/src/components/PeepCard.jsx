@@ -7,7 +7,6 @@ const PeepCard = ({ data, EllipsisButton, user }) => {
         .slice()
         .reverse()
         .map((post) => {
-          console.log(post);
           return (
             <div key={post._id}>
               <div className="centerCustom">
