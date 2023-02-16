@@ -1,6 +1,6 @@
 import moment from "moment";
 
-const PeepCard = ({ data, EllipsisButton, user }) => {
+const PeepCard = ({ data, EllipsisButton, user, onDelete }) => {
   return (
     <>
       {data
@@ -16,7 +16,12 @@ const PeepCard = ({ data, EllipsisButton, user }) => {
                   </h5>
                   {post.userName === user.userName ? (
                     <div className="absolute top-2 right-5">
-                      {EllipsisButton && <EllipsisButton />}
+                      {EllipsisButton && (
+                        <EllipsisButton
+                          postId={post._id}
+                          onDelete={() => onDelete(post._id)}
+                        />
+                      )}
                     </div>
                   ) : null}
                   <p className="font-light text-gray-700 dark:text-gray-100 text-xs">

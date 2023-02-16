@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
-const EllipsisButton = ({ onDelete }) => {
+const EllipsisButton = ({ onDelete, postId }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -23,9 +23,11 @@ const EllipsisButton = ({ onDelete }) => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
+  // console.log(postId);
+  // console.log("onDelete prop:", onDelete);
   const handleDelete = () => {
-    onDelete();
+    // console.log(postId);
+    onDelete(postId);
     setIsOpen(false); // close the dropdown menu after the delete button is clicked
   };
 

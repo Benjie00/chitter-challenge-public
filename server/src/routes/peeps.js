@@ -14,7 +14,6 @@ router.route("/").get((req, res) => {
 router.route("/").post(async (req, res) => {
   const newPeep = new Peep(req.body);
   try {
-    console.log(newPeep);
     const peep = await newPeep.save();
     res.status(201).json(peep);
   } catch (e) {

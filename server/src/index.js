@@ -31,7 +31,7 @@ app.use(cors());
 app.use("/", peeps);
 app.use(`/login`, login);
 app.use(`/createAccount`, createAccount);
-app.use(`/deletePost/:id`, deletePost);
+app.use(`/deletePost`, deletePost);
 
 main();
 

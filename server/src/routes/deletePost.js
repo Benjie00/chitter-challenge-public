@@ -1,9 +1,9 @@
 import express from "express";
-import Peep from "../models/peepModel"; // assuming your Post model is defined in a separate file
+import Peep from "../models/peepModel.js";
 
 const router = express.Router();
 
-router.delete("/peeps/:id", async (req, res) => {
+router.route("/:id").delete(async (req, res) => {
   try {
     const result = await Peep.findByIdAndDelete(req.params.id);
     if (!result) {

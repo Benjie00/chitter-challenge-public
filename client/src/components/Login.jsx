@@ -26,7 +26,6 @@ const Login = ({ setUser: setLoginUser }) => {
       user
     );
     alert(res.data.message);
-    console.dir(res.data.user);
     setLoginUser(res.data.user);
     setUser({ email: "", password: "" });
     setLoggedIn(res.data.user ? true : false);

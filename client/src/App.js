@@ -54,11 +54,11 @@ function App() {
     }
   };
 
-  const onDelete = async (post) => {
+  const onDelete = async (postId) => {
     setLoading(true);
     try {
       const response = await axios.delete(
-        `https://chitter-xdej.onrender.com/posts/${post._id}`
+        `http://localhost:8080/deletePost/${postId}`
       );
       setLoading(false);
       if (response.status === 200) {
