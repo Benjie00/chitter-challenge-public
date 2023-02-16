@@ -12,6 +12,9 @@ import PeepCard from "./components/PeepCard";
 import Post from "./components/Post";
 import CreateAccount from "./components/CreateAccount";
 import EllipsisButton from "./components/EllipsisButton";
+import { ToastContainer, toast } from "react-toastify";
+// import Toast from "./components/Toast";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [data, setData] = useState([]);
@@ -54,6 +57,22 @@ function App() {
     }
   };
 
+  // const onDelete = async (postId) => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await axios.delete(
+  //       `http://localhost:8080/deletePost/${postId}`
+  //     );
+  //     setLoading(false);
+  //     if (response.status === 200) {
+  //       getData();
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     setLoading(false);
+  //     setErrorStatus(error.message);
+  //   }
+  // };
   const onDelete = async (postId) => {
     setLoading(true);
     try {
@@ -63,6 +82,7 @@ function App() {
       setLoading(false);
       if (response.status === 200) {
         getData();
+        toast("Post Deleted");
       }
     } catch (error) {
       console.log(error);
@@ -71,11 +91,20 @@ function App() {
     }
   };
 
-  // console.log(user);
-  // console.log(data);
-
   return (
     <React.Fragment>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <HelmetProvider>
         <Helmet>
           <title>Chitter</title>
