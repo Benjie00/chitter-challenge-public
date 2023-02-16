@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 import { peeps } from "./routes/peeps.js";
 import { login } from "./routes/login.js";
 import { createAccount } from "./routes/createAccount.js";
+import { deletePost } from "./routes/deletePost.js";
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
@@ -30,6 +31,7 @@ app.use(cors());
 app.use("/", peeps);
 app.use(`/login`, login);
 app.use(`/createAccount`, createAccount);
+app.use(`/deletePost/:id`, deletePost);
 
 main();
 
